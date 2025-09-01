@@ -1,0 +1,237 @@
+/* Главная страница - минималистичный дизайн */
+.home-page {
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Навигационная панель */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #ffffff;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-icon {
+  display: flex;
+  gap: 2px;
+  align-items: flex-end;
+}
+
+.equalizer-bar {
+  width: 3px;
+  background-color: #000000;
+  border-radius: 1px;
+}
+
+.equalizer-bar:nth-child(1) {
+  height: 20px;
+}
+
+.equalizer-bar:nth-child(2) {
+  height: 28px;
+}
+
+.equalizer-bar:nth-child(3) {
+  height: 16px;
+}
+
+.logo-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
+/* Основной контент */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+/* Героическая секция */
+.hero-section {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.main-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #000000;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #666666;
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+/* Кнопки действий */
+.action-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.action-button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.button-icon {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.button-text {
+  font-weight: 500;
+}
+
+/* Секция недавно оцененных треков */
+.recent-tracks {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 2rem;
+}
+
+.tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.track-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.album-cover-placeholder {
+  width: 80px;
+  height: 80px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.track-info {
+  flex: 1;
+}
+
+.track-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+.track-artist {
+  font-size: 1rem;
+  color: #666666;
+  margin-bottom: 0.5rem;
+}
+
+.track-rating {
+  font-size: 0.9rem;
+  color: #000000;
+  font-weight: 500;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .main-content {
+    padding: 2rem 1rem;
+  }
+  
+  .main-title {
+    font-size: 2.5rem;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .action-button {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+  
+  .tracks-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .track-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .album-cover-placeholder {
+    margin: 0 auto;
+  }
+}
